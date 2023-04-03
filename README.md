@@ -1,8 +1,8 @@
 # University-Java-Project
 
-# Student Record management System
+# Chat With AI
 
-## TechStacks
+## Technologies Used
 - React
 - SpringBoot
 - Nodejs
