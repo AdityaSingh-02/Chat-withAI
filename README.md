@@ -6,3 +6,4 @@
 - React
 - SpringBoot
 - Nodejs
+- Open Ai api
