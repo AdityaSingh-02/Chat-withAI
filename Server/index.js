@@ -1,34 +1,42 @@
-import express from 'express'
+const express = require('express')
+const { Configuration, OpenAIApi } = require("openai");
+const cors = require('cors');
+const bodyParser = require('body-parser')
 const app = express();
-import { Configuration, OpenAIApi } from "openai";
-
 const PORT = 3002;
-
-const configuration = new Configuration({
-    organization: "org-j84p1Mdi8vtIhl2cORfKeM3G",
-    apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
-const response = await openai.createCompletion({
-    model: "text-davinci-003",
-    prompt: "Say this is a test",
-    max_tokens: 7,
-    temperature: 0,
-});
+app.use(express.json())
+app.use(cors({
+    origin: 'http://localhost:5173'
+}));
+const jsonParser = bodyParser.json();
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(urlencodedParser)
+app.use(jsonParser)
 
 
-app.post('https://api.openai.com/v1/completions', {
-    method: 'POST',
-    header: {
-        'Content-Type': 'application/json',
-        configuration,
-    },
-    body: {
-        response
-    }
+const fetchData = async () => {
+    const configuration = new Configuration({
+        apiKey: process.env.OPENAI_API_KEY,
+    });
+    const openai = new OpenAIApi(configuration);
+    const chatHistory=[];
+}
+
+let pr;
+
+app.post('/question',(req,res)=>{
+    res.send(req.body.query)
+    pr = req.body.query
+})
+
+app.get('/question',(req,res)=>{
+    res.json(pr)
+})
+
+app.get('/',(req,res)=>{
+    res.send("Hello")
 })
 
 app.listen(PORT, () => {
     console.log(`Server running at ${PORT}`)
-})
-
+});
