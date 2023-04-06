@@ -1,6 +1,7 @@
 *{
     margin-top:2rem;
 }
+
 .list-items{
     display:flex;
     flex-direction:row;
@@ -13,8 +14,9 @@
     padding:1rem;
     text-decoration:none;
     color:white;
-    font-family:Arial;
+    font-family: 'pacifico';
     border:1px solid transparent;
+    padding-right: 30px;
 }
 .port-home:hover{
     animation-name:aamri;
@@ -48,8 +50,9 @@
     margin-right:1rem;
 }
 .Nav-head{
-    font-family:Arial;
+    font-family:'Dancing Script';
     color:white;
+    padding-left: 30px;
 }
 @keyframes aamri{
     0%{border-bottom:1px solid transparent;}
