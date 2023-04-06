@@ -1,12 +1,13 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import "./NavbarStyles.css"
+
 const Navbar = () => {
   return (
     <center>
     <div className="Main main">
       <div className="Heading">
-        <h1 className="Nav-head">Navbar</h1>
+        <h1 className="Nav-head">ChatAi</h1>
       </div>
       <ul className="list-items">
         <li className="ports port-home">
