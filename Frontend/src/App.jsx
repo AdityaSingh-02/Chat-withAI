@@ -1,4 +1,5 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom"
+
 import HomeRoute from "./routes/HomeRoute";
 import AboutRoute from "./routes/AboutRoute";
 function App() {
@@ -10,7 +11,7 @@ function App() {
           <Route path="/about" element={<AboutRoute />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </> 
   )
 }
 

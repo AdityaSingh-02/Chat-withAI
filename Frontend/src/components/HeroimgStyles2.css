@@ -1,0 +1,34 @@
+.Main{
+    margin:0;
+    padding:0;
+    background-color:black;
+    background-size: cover;
+    object-fit:fill;
+    width:100%;
+    height:100vh;
+    position:relative;
+}
+
+.hero-container{
+    width:52.5%;
+    left:25%;
+    top:80%;
+    position:absolute;
+    display:flex;
+    gap:1rem;
+    align-content:center;
+}
+.main-input{
+    width:180rem;
+    height:3rem;
+    font-size:30px;
+    color:white;
+    background-color:black;
+    border:1px solid white;
+    border-radius:20px;
+}
+.arrow .arrow-img{
+    padding-top:6px;
+    height:4rem;
+    width:3rem;
+}
