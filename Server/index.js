@@ -23,7 +23,7 @@ const fetchData = async () => {
 }
 
 let pr;
-
+let api;
 app.post('/question',(req,res)=>{
     res.send(req.body.query)
     pr = req.body.query
@@ -35,6 +35,12 @@ app.get('/question',(req,res)=>{
 
 app.get('/',(req,res)=>{
     res.send("Hello")
+})
+
+app.post('/getApi',(req,res)=>{
+    res.send(req.body.api)
+    api = req.body.api
+    console.log(api)
 })
 
 app.listen(PORT, () => {

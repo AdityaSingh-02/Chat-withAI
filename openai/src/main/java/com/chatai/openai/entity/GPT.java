@@ -11,7 +11,7 @@ public class GPT {
     private Integer id;
 
     @Column(name = "ApiKey")
-    private Integer Apikey;
+    private String Apikey;
 
     @Column(name = "userName")
     private String Name;
@@ -25,10 +25,10 @@ public class GPT {
         this.id = id;
     }
 
-    public Integer getApikey() {
+    public String getApikey() {
         return Apikey;
     }
-    public void setApikey(Integer Apikey) {
+    public void setApikey(String Apikey) {
         this.Apikey = Apikey;
     }
 
