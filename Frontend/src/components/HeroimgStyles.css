@@ -70,7 +70,9 @@
     font-family: Arial, Helvetica, sans-serif;
 
 }
-
+ .items input:active{
+    border: none;
+ }
 
 .welcome{
     font-size:2rem;
@@ -100,8 +102,10 @@
 .Login-page input:hover{
     background-color: rgb(16, 16, 16);
     color:white;
+    transition: ease-in-out 500ms;
 }
 .submit:hover{
     background-color: black;
     color:white;
+    transition: ease-in-out 500ms;
 }
