@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from "../components/Navbar"
 import Heroimg2 from '../components/Heroimg2'
-const Login_page = () => {
+const Login = () => {
   return (
     <div>
       <Navbar/>
@@ -10,4 +10,4 @@ const Login_page = () => {
   )
 }
 
-export default Login_page
+export default Login
