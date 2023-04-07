@@ -5,7 +5,7 @@ import "./NavbarStyles.css"
 const Navbar = () => {
   return (
     <center>
-    <div className="Main main">
+    <div className="Main-main">
       <div className="Heading">
         <h1 className="Nav-head">ChatAi</h1>
       </div>
