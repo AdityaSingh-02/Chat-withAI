@@ -4,7 +4,7 @@ import "./NavbarStyles.css"
 const Navbar = () => {
   return (
     <center>
-    <div className="Main main">
+    <div className="Main-main">
       <div className="Heading">
         <h1 className="Nav-head">Navbar</h1>
       </div>

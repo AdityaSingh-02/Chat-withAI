@@ -34,7 +34,7 @@
     animation-duration: 2s;
     border-bottom:2px solid white;
 }
-.Main{
+.Main-main{
     margin-top:1rem;
     display:flex;
     grid-template-rows:repeat(1px,1fr);
