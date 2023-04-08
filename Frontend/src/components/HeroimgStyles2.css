@@ -1,7 +1,8 @@
 .Main{
     margin:0;
     padding:0;
-    background-color:rgb(50, 50, 50);
+    /* background-color:rgb(50, 50, 50); */
+    background: linear-gradient(rgb(255, 2, 2),rgb(255, 79, 108),rgb(0, 29, 247));
     background-size: cover;
     object-fit:fill;
     width:100%;
@@ -32,7 +33,7 @@
     justify-content: end;
     padding-top: 20px;
     gap:1rem;
-    overflow: auto;
+    /* overflow: auto; */
     transform: rotate(180deg)
     direction rtl
 }
@@ -46,6 +47,10 @@
     direction rtl
 }
 
+.QNAField ul li{
+    padding: 10px;
+}
+
 .hero-container{
     width:52.5%;
     left:25%;
@@ -55,6 +60,13 @@
     gap:1rem;
     align-content:center;
 }
+
+.hero-container input{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    padding-left: 20px;
+}
+
 .main-input{
     width:180rem;
     height:3rem;
