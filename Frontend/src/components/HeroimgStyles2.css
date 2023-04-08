@@ -32,7 +32,7 @@
     justify-content: end;
     padding-top: 20px;
     gap:1rem;
-    overflow: auto;
+    /* overflow: auto; */
     transform: rotate(180deg)
     direction rtl
 }
