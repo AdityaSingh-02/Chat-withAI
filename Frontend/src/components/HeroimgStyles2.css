@@ -10,6 +10,42 @@
     color: white;
 }
 
+
+.container{
+    width:70%;
+    height:80%;
+    position:absolute;
+    top: 100px;
+    left: 15%;
+    background-color:rgba(0,0,0,0.5);
+    display:flex;
+    flex-direction:column;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.QNAField{
+    width:90%;
+    height:78%;
+    display:flex;
+    flex-direction:column;
+    justify-content: end;
+    padding-top: 20px;
+    gap:1rem;
+    overflow: auto;
+    transform: rotate(180deg)
+    direction rtl
+}
+.QNAField p{
+    font-size: 15px;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    font-family: 'Press Start 2P', cursive;
+    transform: rotate(180deg)
+    direction rtl
+}
+
 .hero-container{
     width:52.5%;
     left:25%;
@@ -30,7 +66,7 @@
 }
 .arrow .arrow-img{
     padding-top:6px;
-    height:4rem;
+    height:2rem;
     width:3rem;
 }
 
