@@ -29,7 +29,11 @@ const Heroimg = () => {
                         axios.get('http://localhost:8080/v1/api/login/getAuth')
                             .then(response => {
                                 axios.post('http://localhost:3002/getApi', { "api": response.data.slice(-1) })
-                                .then(resp => {console.log(resp)});
+                                .then(resp => {
+                                    if(resp.data === 401){
+                                        console.log('fail');
+                                    }
+                                });
                                 setNavigate(!navigate);
                             })
                     } else {
