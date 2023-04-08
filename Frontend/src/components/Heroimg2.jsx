@@ -6,10 +6,8 @@ import axios from 'axios'
 
 const Heroimg2 = () => {
 
-  const[ques , setQues] = useState({query:""});
-  const[data , setData] = useState('');
-  const [displayQeus , setDisplayQues] = useState([]);
-
+  const [ques, setQues] = useState({ query: "" });
+  const [displayQeus, setDisplayQues] = useState([]);
 
   const handleQuestion = (e) => {
     setQues(prev => {
@@ -19,39 +17,53 @@ const Heroimg2 = () => {
       }
     })
   }
-  
-  
+
+
   const handleSubmitQuestion = (e) => {
     e.preventDefault();
     setDisplayQues(prev => {
       return [...prev, ques.query]
     })
+    setQues({ query: "" })
     console.log(displayQeus[0])
     axios.post('http://localhost:3002/question', { "query": ques.query })
-    .then(res => {
-      if(res.status === 200){
-        axios.get('http://localhost:3002/answer')
-        .then(response => {
-          console.log(response.data);
-        }).catch(err => console.log(err))
-      }
-    }).catch(err => console.log(err))
+      .then(res => {
+        if (res.status === 200) {
+          axios.get('http://localhost:3002/answer')
+            .then(response => {
+              console.log(response.data.content);
+              setDisplayQues(prev => {
+                return [...prev, response.data.content]
+              })
+            }).catch(err => console.log(err))
+        }
+      }).catch(err => console.log(err))
   }
+
+
 
   return (
     <>
       <center>
         <div className="Main">
-              <div className="container">
-                <span className="QNAField">
-                  <p>{displayQeus.map(items => {
-                    return <p>{items}</p>
-                  })}</p>
-                </span>
-              </div>
+          <div className="container">
+            <span className="QNAField">
+              <ul>
+                {displayQeus.map((ques, index) => {
+                  return (
+                    <li key={index}>
+                      <div className="question">
+                        <p>{ques}</p>
+                      </div>
+                    </li>
+                  )
+                })}
+              </ul>
+            </span>
+          </div>
           <center>
             <div className="hero-container">
-              <input type="text" className="main-input" onChange={handleQuestion} />
+              <input type="text"  className="main-input" onChange={handleQuestion} value={ques.query || ''} />
               <button type='button' onClick={handleSubmitQuestion} className="arrow"><img src={send} className="arrow-img" /></button>
             </div>
           </center>
