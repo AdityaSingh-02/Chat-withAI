@@ -8,7 +8,6 @@ import { Navigate, useNavigate } from 'react-router-dom'
 const Heroimg = () => {
 
     const [loginData, setLoginData] = useState({ name: '', ApiKey: null })
-    const [resData, setResData] = useState({});
     const [navigate, setNavigate] = useState(false);
 
     const formAction = (e) => {
@@ -32,12 +31,6 @@ const Heroimg = () => {
                                 axios.post('http://localhost:3002/getApi', { "api": response.data.slice(-1) })
                                 .then(resp => {console.log(resp)});
                                 setNavigate(!navigate);
-                                // setResData(prev => {
-                                //     return {
-                                //         ...prev,
-                                //         resData: response.data.slice(-1)
-                                //     }
-                                // })
                             })
                     } else {
                         console.log('fail');
