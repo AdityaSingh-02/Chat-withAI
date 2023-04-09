@@ -4,10 +4,13 @@ import send from "../assets/send.png"
 import img from "../assets/login-background.jpg"
 import axios from 'axios'
 
+import { Navigate } from 'react-router-dom'
+
 const Heroimg2 = () => {
 
   const [ques, setQues] = useState({ query: "" });
   const [displayQeus, setDisplayQues] = useState([]);
+  const [navigate, setNavigate] = useState(false);
 
   const handleQuestion = (e) => {
     setQues(prev => {
@@ -31,11 +34,12 @@ const Heroimg2 = () => {
         if (res.status === 200) {
           axios.get('http://localhost:3002/answer')
             .then(response => {
-              console.log(response.data.content);
-              setDisplayQues(prev => {
-                return [...prev, response.data.content]
-              })
-            }).catch(err => console.log(err))
+              if(response.status === 200){
+                setDisplayQues(prev => {
+                  return [...prev, response.data.content]
+                })
+              }
+            }).catch(err => setNavigate(!navigate))
         }
       }).catch(err => console.log(err))
   }
@@ -69,6 +73,7 @@ const Heroimg2 = () => {
           </center>
         </div>
       </center>
+      {navigate && <Navigate to="/error" />}
     </>
   )
 }
