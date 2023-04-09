@@ -1,0 +1,34 @@
+.Error-container{
+    margin:0;
+    height:100vh;
+    width:100%;
+    position:relative;
+}
+.Error-img{
+    position: absolute;
+    left:38%;
+    top:40%;
+}
+.error-img{
+    width:20rem;
+    height:20rem;
+}
+.Main-heading{
+    position:absolute;
+    left:40%;
+    top:20%;
+    text-transform:uppercase;
+    font-size:5rem;
+    color:rgb(107, 105, 105);
+    text-align:center;
+}
+.Main-description{
+    position:absolute;
+    left:35%;
+    top:33%;
+    text-transform:uppercase;
+    font-size:3rem;
+    color:rgb(107, 105, 105);
+    text-align:center;
+    color:yellow;
+}
