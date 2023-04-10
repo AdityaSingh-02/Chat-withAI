@@ -1,5 +1,5 @@
 import React from 'react'
-import leftimg from "../assets/left-image.jpg"
+import leftimg from "../assets/2.jpg"
 import "./HeroimgStyles.css"
 import { useState } from 'react'
 import axios from 'axios'

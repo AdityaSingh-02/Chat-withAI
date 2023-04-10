@@ -1,0 +1,12 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.AboutContainer{
+    background-image: url("../assets/1.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
