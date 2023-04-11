@@ -9,4 +9,20 @@
     background-size: cover;
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.aboutSection{
+    /* padding-top: 200px; */
+    color: white;
+    width: 80%;
+    height: 70%;
+    background-color: rgba(26, 26, 26, 0.866);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
