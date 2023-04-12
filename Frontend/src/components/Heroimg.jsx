@@ -62,14 +62,14 @@ const Heroimg = () => {
                                 <div className="items">
                                     <label htmlFor="Name">Name</label>
                                     <br />
-                                    <input id="Name" type="text" placeholder='Name' name='name' value={loginData.name} onChange={formAction} required />
+                                    <input id="Name" type="text" placeholder='Name' name='name' value={loginData.name || ''} onChange={formAction} required />
                                 </div>
                             </center>
                             <center>
                                 <div className="items">
                                     <label htmlFor="Api Key">API Key</label>
                                     <br />
-                                    <input id="Api Key" type="text" placeholder='API KEY' name='ApiKey' value={loginData.ApiKey} onChange={formAction} required />
+                                    <input id="Api Key" type="text" placeholder='API KEY' name='ApiKey' value={loginData.ApiKey || ''} onChange={formAction} required />
                                 </div>
                             </center>
                             <center>

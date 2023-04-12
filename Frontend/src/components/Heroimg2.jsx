@@ -44,7 +44,10 @@ const Heroimg2 = () => {
       }).catch(err => console.log(err))
   }
 
-
+  const sendOnEnter = e =>{
+    e.preventDefault();
+    console.log("He;lllllll")
+  }
 
   return (
     <>
@@ -68,7 +71,7 @@ const Heroimg2 = () => {
           <center>
             <div className="hero-container">
               <input type="text"  className="main-input" onChange={handleQuestion} value={ques.query || ''} />
-              <button type='button' onClick={handleSubmitQuestion} className="arrow"><img src={send} className="arrow-img" /></button>
+              <button type='button' onClick={handleSubmitQuestion} onKeyDown={sendOnEnter} className="arrow"><img src={send} className="arrow-img" /></button>
             </div>
           </center>
         </div>
