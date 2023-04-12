@@ -34,7 +34,7 @@ const Heroimg2 = () => {
         if (res.status === 200) {
           axios.get('http://localhost:3002/answer')
             .then(response => {
-              if(response.status === 200){
+              if (response.status === 200) {
                 setDisplayQues(prev => {
                   return [...prev, response.data.content]
                 })
@@ -44,9 +44,11 @@ const Heroimg2 = () => {
       }).catch(err => console.log(err))
   }
 
-  const sendOnEnter = e =>{
+  const sendOnEnter = e => {
     e.preventDefault();
-    console.log("He;lllllll")
+    if(e.key === 'Enter'){
+      console.log("Enter pressed")
+    }
   }
 
   return (
@@ -70,8 +72,12 @@ const Heroimg2 = () => {
           </div>
           <center>
             <div className="hero-container">
-              <input type="text"  className="main-input" onChange={handleQuestion} value={ques.query || ''} />
-              <button type='button' onClick={handleSubmitQuestion} onKeyDown={sendOnEnter} className="arrow"><img src={send} className="arrow-img" /></button>
+              <input type="text" className="main-input" onKeyDown={(e)=>{
+                if(e.key === 'Enter'){
+                  handleSubmitQuestion(e)
+                }
+              }} onChange={handleQuestion} value={ques.query || ''} />
+              <button type='button' onClick={handleSubmitQuestion} className="arrow"><img src={send} className="arrow-img" /></button>
             </div>
           </center>
         </div>
