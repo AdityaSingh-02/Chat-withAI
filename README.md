@@ -13,7 +13,7 @@
 ![cover](https://user-images.githubusercontent.com/94185167/230737009-77a331d8-9f85-4e09-b929-f93ca118be54.png)
 
 # **Contributors**
-#### Special thanks to [Aamri](https://github.com/AamriGuleria) for amazing contributions
+### Special thanks to [Aamri](https://github.com/AamriGuleria) for amazing contributions
 
 # How to get Started
 - frontend
