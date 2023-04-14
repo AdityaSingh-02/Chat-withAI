@@ -8,7 +8,7 @@
 
 ![cover](https://user-images.githubusercontent.com/94185167/230737076-b3d83a5e-ee51-4b3b-8692-3a8ac12de6b1.png)
 
-- Chat InterFace
+- Chat Interface
 
 ![cover](https://user-images.githubusercontent.com/94185167/230737009-77a331d8-9f85-4e09-b929-f93ca118be54.png)
 
