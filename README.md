@@ -16,13 +16,13 @@
 ### Special thanks to [Aamri](https://github.com/AamriGuleria) for amazing contributions
 
 # How to get Started
-- frontend
+- ## frontend
   - npm install
   - npm run dev
-- server
+- ## server
   - npm install
   - npm run nodemon  OR  node index.js
-- OpenAi (SpringBoot)
+- ## OpenAi (SpringBoot)
   - Must have JDK and JVM and java version 17
   - ...src/main/java/com.chatai.openai/OpenaiApplication
   - Run the program
